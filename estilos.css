@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+  /* overflow-x: hidden; Evitar que la página se desplace horizontalmente */
+}
+
+.hero-container {
+  background-image: url('foto1.JPG');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  height: 100vh;
+  position: relative;
+  transition: transform 0.3s ease; /* Añadir transición para el deslizamiento de la página */
+}
+
+.top-bar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reserva-btn {
+  background-color: #0e1a3a;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.reserva-btn:hover {
+  background-color: #1a2c5b;
+}
+
+.menu-icon {
+  background: white;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.menu-icon div {
+  height: 3px;
+  background-color: #0e1a3a;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero-emblema {
+  width: 1200px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.5em;
+  color: white;
+}
+
+main {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease; /* Transición para mover la página principal */
+}
+
+.seccion-destacada {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.seccion-img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.seccion-texto {
+  width: 55%;
+  height: 300px;
+  padding-top: 30px;
+  padding-left: 40px;
+  background-color: #fff;
+  position: relative;
+}
+
+.icono-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #0e1a3a;
+  padding: 20px;
+}
+
+.icono-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.seccion-texto h2 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.seccion-texto h3 {
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.seccion-texto p {
+  font-size: 1.1em;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.seccion-texto a {
+  font-weight: bold;
+  color: #3498db;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.seccion-texto a:hover {
+  color: #2980b9;
+}
+
+.bloque {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+.bloque h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.bloque p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Barra lateral de reservas desde la derecha */
+.menu-toggle {
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Inicialmente fuera de la pantalla a la derecha */
+  width: 300px;
+  height: 100%;
+  background-color: #1A2B48;
+  transition: right 0.3s ease; /* Desliza la barra lateral desde la derecha */
+  z-index: 1000;
+  padding: 20px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3); /* Sombra hacia la izquierda */
+}
+
+.sidebar-content h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.sidebar form {
+  color: #fff;
+}
+
+.sidebar form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.sidebar form input, .sidebar form select, .sidebar form button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.sidebar form button {
+  background-color: #C0A378;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-toggle:checked + .sidebar {
+  right: 0; /* Desliza la barra lateral hacia la izquierda (mostrándola) */
+}
+
+.menu-toggle:checked ~ .hero-container {
+  transform: translateX(-300px); /* Desliza la página principal hacia la izquierda */
+}
+
+.menu-toggle:checked ~ main {
+  transform: translateX(-300px); /* Desliza el contenido principal hacia la izquierda */
+}
+
+.hero-new {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: block;
+}
+
+.hero-new .head-img {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-new .head-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: middle center;
+}
+
+.hero-new .txt {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  top: 30%;
+  right: 0;
+  left: 0;
+}
+
+.hero-new .txt h3 {
+  text-transform: none;
+}
+
+.hero-new .txt .emblema {
+  width: 750px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-home .txt {
+  top: 35%!important;
+}
+
+.hero-home .txt .subti {
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: 'Asap', sans-serif;
+  color: #FFF;
+}
+
+@media (max-width: 767px) {
+  .hero-home .txt .subti {
+    font-size: 18px;
+  }
+}
+
+.hero-home .txt .emblema {
+  position: relative;
+  width: 750px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .hero-home .txt .emblema {
+    width: 90%;
+  }
+}
+
+.hero-home .txt .emblema:after {
+  position: relative;
+  width: 100%;
+}
+
+/* Estilo para las secciones lado a lado (Golf y Resort) */
+.secciones-lado-a-lado {
+  display: flex; /* Establece el layout de las secciones en una fila */
+  gap: 20px; /* Espacio entre las secciones */
+  margin-bottom: 40px; /* Margen inferior */
+}
+
+.seccion-img1 {
+  width: 100%; /* La imagen ocupa todo el ancho */
+  height: 250px; /* Ajuste de tamaño de la imagen */
+  object-fit: cover;
+  border-radius: 8px;
+}
+/* Ajustes para las imágenes */
+.seccion-img1 img {
+  width: 100%; /* La imagen ocupará todo el ancho disponible del contenedor */
+  height: 250px; /* Ajusta la altura de la imagen */
+  object-fit: cover; /* Mantiene la proporción de la imagen mientras cubre todo el contenedor */
+  border-radius: 8px; /* Mantiene el borde redondeado si lo deseas */
+}
+
+/* Ajustes para la sección de texto en .seccion-destacada1 */
+.seccion-destacada1 .seccion-texto {
+  width: 100%; /* Mantiene el ancho proporcional con la imagen */
+  padding-top: 20px; /* Ajusta el padding superior */
+  padding-left: 30px; /* Ajusta el padding izquierdo para separar el texto */
+  background-color: #fff; /* Mantiene el fondo blanco */
+  position: relative;
+  height: 250px; /* Limita la altura de la sección de texto */
+  overflow: hidden; /* Asegura que el texto no se desborde */
+}
+
+.seccion-destacada1 .seccion-texto h2 {
+  font-size: 2.2em; /* Tamaño del título */
+  margin-bottom: 10px; /* Espacio debajo del título */
+  color: #333; /* Color del título */
+}
+
+.seccion-destacada1 .seccion-texto h3 {
+  font-weight: 500;
+  color: #666; /* Color del subtítulo */
+  letter-spacing: 1.5px;
+  margin-bottom: 15px; /* Espacio debajo del subtítulo */
+  text-transform: uppercase; /* Pone el texto en mayúsculas */
+  font-size: 1em; /* Ajusta el tamaño del subtítulo */
+}
+
+.seccion-destacada1 .seccion-texto p {
+  font-size: 1.1em; /* Ajusta el tamaño del texto */
+  color: #444; /* Color del párrafo */
+  margin-bottom: 20px; /* Espacio debajo del párrafo */
+}
+
+.seccion-destacada1 .seccion-texto a {
+  font-weight: bold;
+  color: #3498db; /* Color del enlace */
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.seccion-destacada1 .seccion-texto a:hover {
+  color: #2980b9; /* Color del enlace al pasar el ratón */
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.9em;
+}

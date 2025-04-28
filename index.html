@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Llao Llao Resort</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <div class="hero-container">
+    <header class="top-bar">
+      <div class="logo">
+        <img src="logo.svg" alt="Llao Llao Logo" />
+      </div>
+      <div class="nav-buttons">
+        <label for="menu-toggle" class="reserva-btn">RESERVAS</label>
+        <div class="menu-icon">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="hero-text">
+      <img src="emblemaLlaoLlao.svg" alt="Emblema Llao Llao" class="hero-emblema" />
+      <p>Un lugar para hacer mucho más que descansar</p>
+    </div>
+  </div>
+
+  <!-- Barra lateral de reservas -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <div class="sidebar">
+    <div class="sidebar-content">
+      <h3>Reservas</h3>
+      <form>
+        <label for="llegada">Llegada:</label>
+        <input type="date" id="llegada" name="llegada">
+        <label for="salida">Salida:</label>
+        <input type="date" id="salida" name="salida">
+        <label for="huéspedes">Huéspedes:</label>
+        <select id="huéspedes" name="huéspedes">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        <button type="submit">Reservar</button>
+      </form>
+    </div>
+  </div>
+
+  <main>
+    <section class="seccion-destacada">
+      <div class="seccion-img">
+        <img src="habitacion.JPG" alt="Habitaciones" />
+      </div>
+      <div class="seccion-texto">
+        <div class="icono-box">
+          <img src="icon80.png" alt="Ícono Habitación" />
+        </div>
+        <h2>Habitaciones & Suites</h2>
+        <h3>LUJO Y CONFORT EN PATAGONIA</h3>
+        <p>...</p>
+        <a href="studio.html">VER MÁS</a>
+      </div>
+    </section>
+  
+    <section class="seccion-destacada">
+      <div class="seccion-img">
+        <img src="gastronomia.jpg" alt="Gatronomía" />
+      </div>
+      <div class="seccion-texto">
+        <div class="icono-box">
+          <img src="icon80.png" alt="Ícono Gatronomía" />
+        </div>
+        <h2>Gastronomía</h2>
+        <h3>RESTAURANTES Y BARES</h3>
+        <p>...</p>
+        <a href="#">VER MÁS</a>
+      </div>
+    </section>
+  
+    <!-- Nuevo contenedor para Golf y Resort -->
+    <section class="secciones-lado-a-lado">
+      <!-- Sección de Golf -->
+      <section class="seccion-destacada1">
+        <div class="seccion-img1">
+          <img src="foto30.jpeg" alt="Golf" />
+        </div>
+        <div class="seccion-texto">
+          <div class="icono-box">
+            <img src="icon80.png" alt="Ícono Golf" />
+          </div>
+          <h2>Golf</h2>
+          <h3>CAMPO DE GOLF EN BARILOCHE</h3>
+          <p>18 hoyos en medio de un imponente marco de montañas y lagos de aguas cristalinas.</p>
+          <a href="#">VER MÁS</a>
+        </div>
+      </section>
+  
+      <!-- Sección de Resort -->
+      <section class="seccion-destacada1">
+        <div class="seccion-img1">
+          <img src="foto30.jpeg" alt="Resort" />
+        </div>
+        <div class="seccion-texto">
+          <div class="icono-box">
+            <img src="icon80.png" alt="Ícono Resort" />
+          </div>
+          <h2>Resort</h2>
+          <h3>ACTIVIDADES RECREATIVAS</h3>
+          <p>Disfruta las actividades de nuestro resort patagónico para toda la familia.</p>
+          <a href="#">VER MÁS</a>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Llao Llao Resort, Golf & Spa</p>
+    <p>Av. Ezequiel Bustillo Km. 25, Bariloche, Río Negro, Argentina</p>
+    <p>Tel: +54 294 4445700 | Email: info@llaollao.com</p>
+  </footer>
+
+</body>
+</html>
