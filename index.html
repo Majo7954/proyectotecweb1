@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Llao Llao Resort</title>
+  <title>Estudio de Fotografía A22</title>
   <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
   <div class="hero-container">
     <header class="top-bar">
       <div class="logo">
-        <img src="logo.svg" alt="Llao Llao Logo" />
+        <h1>A22 Estudio</h1>
       </div>
       <div class="nav-buttons">
-        <label for="menu-toggle" class="reserva-btn">RESERVAS</label>
+        <label for="menu-toggle" class="reserva-btn">COTIZAR</label>
         <div class="menu-icon">
           <div></div>
           <div></div>
@@ -23,29 +23,27 @@
     </header>
 
     <div class="hero-text">
-      <img src="emblemaLlaoLlao.svg" alt="Emblema Llao Llao" class="hero-emblema" />
-      <p>Un lugar para hacer mucho más que descansar</p>
+      <h2>Capturamos momentos únicos para toda la vida</h2>
     </div>
   </div>
-
-  <!-- Barra lateral de reservas -->
+  
   <input type="checkbox" id="menu-toggle" class="menu-toggle">
   <div class="sidebar">
     <div class="sidebar-content">
-      <h3>Reservas</h3>
+      <h3>Solicitar Cotización</h3>
       <form>
-        <label for="llegada">Llegada:</label>
-        <input type="date" id="llegada" name="llegada">
-        <label for="salida">Salida:</label>
-        <input type="date" id="salida" name="salida">
-        <label for="huéspedes">Huéspedes:</label>
-        <select id="huéspedes" name="huéspedes">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
+        <label for="fecha">Fecha de la sesión:</label>
+        <input type="date" id="fecha" name="fecha">
+        <label for="tipo">Tipo de sesión:</label>
+        <select id="tipo" name="tipo">
+          <option value="boda">Boda</option>
+          <option value="evento">Evento</option>
+          <option value="retrato">Retrato</option>
+          <option value="producto">Producto</option>
         </select>
-        <button type="submit">Reservar</button>
+        <label for="personas">Número de personas:</label>
+        <input type="number" id="personas" name="personas" min="1" max="100">
+        <button type="submit">Enviar</button>
       </form>
     </div>
   </div>
@@ -53,64 +51,63 @@
   <main>
     <section class="seccion-destacada">
       <div class="seccion-img">
-        <img src="habitacion.JPG" alt="Habitaciones" />
+        <img src="habitacion.JPG" alt="Sesiones de Estudio" />
       </div>
       <div class="seccion-texto">
         <div class="icono-box">
-          <img src="icon80.png" alt="Ícono Habitación" />
+          <img src="icon80.png" alt="Ícono Sesiones" />
         </div>
-        <h2>Habitaciones & Suites</h2>
-        <h3>LUJO Y CONFORT EN PATAGONIA</h3>
-        <p>...</p>
+        <h2>Sesiones de Estudio</h2>
+        <h3>RETRATOS PROFESIONALES Y CREATIVOS</h3>
+        <p>En A22, creamos sesiones fotográficas que capturan tu esencia en cada imagen.</p>
         <a href="studio.html">VER MÁS</a>
       </div>
     </section>
-  
+
     <section class="seccion-destacada">
       <div class="seccion-img">
-        <img src="gastronomia.jpg" alt="Gatronomía" />
+        <img src="gastronomia.jpg" alt="Fotografía Gastronómica" />
       </div>
       <div class="seccion-texto">
         <div class="icono-box">
-          <img src="icon80.png" alt="Ícono Gatronomía" />
+          <img src="icon80.png" alt="Ícono Gastronómico" />
         </div>
-        <h2>Gastronomía</h2>
-        <h3>RESTAURANTES Y BARES</h3>
-        <p>...</p>
+        <h2>Fotografía Gastronómica</h2>
+        <h3>ARTE VISUAL PARA SABORES ÚNICOS</h3>
+        <p>Realzamos la esencia de cada plato con imágenes que despiertan los sentidos.</p>
         <a href="#">VER MÁS</a>
       </div>
     </section>
-  
-    <!-- Nuevo contenedor para Golf y Resort -->
+
     <section class="secciones-lado-a-lado">
-      <!-- Sección de Golf -->
+      <!-- Sección de Retrato -->
       <section class="seccion-destacada1">
         <div class="seccion-img1">
-          <img src="foto30.jpeg" alt="Golf" />
+          <img src="foto30.jpeg" alt="Retratos Profesionales" />
         </div>
         <div class="seccion-texto">
           <div class="icono-box">
-            <img src="icon80.png" alt="Ícono Golf" />
+            <img src="icon80.png" alt="Ícono Retrato" />
           </div>
-          <h2>Golf</h2>
-          <h3>CAMPO DE GOLF EN BARILOCHE</h3>
-          <p>18 hoyos en medio de un imponente marco de montañas y lagos de aguas cristalinas.</p>
+          <h2>Retratos Profesionales</h2>
+          <h3>EXPRESA TU AUTENTICIDAD</h3>
+          <p>Capturamos la personalidad y emociones con un enfoque artístico y profesional.</p>
           <a href="#">VER MÁS</a>
         </div>
       </section>
-  
-      <!-- Sección de Resort -->
+
+      <!-- Sección de Eventos -->
       <section class="seccion-destacada1">
         <div class="seccion-img1">
-          <img src="foto30.jpeg" alt="Resort" />
+          <img src="foto30.jpeg" alt="Cobertura de Eventos" />
         </div>
         <div class="seccion-texto">
           <div class="icono-box">
-            <img src="icon80.png" alt="Ícono Resort" />
+            <img src="icon80.png" alt="Ícono Evento" />
           </div>
-          <h2>Resort</h2>
-          <h3>ACTIVIDADES RECREATIVAS</h3>
-          <p>Disfruta las actividades de nuestro resort patagónico para toda la familia.</p>
+          <h2>Cobertura de Eventos</h2>
+          <h3>DOCUMENTAMOS TUS MEJORES MOMENTOS</h3>
+          <p>Fotografiamos tus eventos sociales y corporativos para crear recuerdos inolvidables.</p>
           <a href="#">VER MÁS</a>
         </div>
       </section>
@@ -118,9 +115,9 @@
   </main>
 
   <footer>
-    <p>© 2025 Llao Llao Resort, Golf & Spa</p>
-    <p>Av. Ezequiel Bustillo Km. 25, Bariloche, Río Negro, Argentina</p>
-    <p>Tel: +54 294 4445700 | Email: info@llaollao.com</p>
+    <p>© 2025 Estudio de Fotografía A22</p>
+    <p>Av. Principal 123, Ciudad de la Imagen, Bolivia</p>
+    <p>Tel: +591 70000000 | Email: contacto@a22fotografia.com</p>
   </footer>
 
 </body>
